@@ -1,10 +1,8 @@
 import React from 'react';
-import Footer from './Footer.js';
-
 
 export default class Header extends React.Component{
 	handleChange(e){
-		const title = e.target.value;
+		const title=e.target.value;
 		this.props.changeTitle(title);
 	}
 
@@ -12,7 +10,7 @@ export default class Header extends React.Component{
 		return(
 			<div>
 			<h1> {this.props.title} </h1>
-			<input value={this.props.title} onChange = {this.handleChange.bind(this)}/>
+			<input type="text" value={this.props.title} onChange={this.handleChange.bind(this)}/>
 			</div>
 			);
 	}
